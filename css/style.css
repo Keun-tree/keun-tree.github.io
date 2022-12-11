@@ -1,0 +1,184 @@
+*{ margin: 0; padding: 0;}
+ul,li{ list-style: none;}
+a{text-decoration: none; color: black;}
+
+/*초기화 영역 end*/
+
+
+/*문제
+헤더 높이 100px 패딩 상하10px 좌우30px
+로고 크기 200*80
+메뉴랩 크기 900*80
+섹션1 높이 700px
+섹션2 높이 500px
+섹션3 높이 600px
+섹션 간격 100px
+박스 크기 300*300
+탑버튼 크기 80*80
+푸터 높이 150px
+
+타이틀 아래에서 위로 등장 css애니메이션
+섹션2 박스 오른쪽에서 중앙으로 등장 js 애니메이트
+섹션3 박스 아래쪽에서 중앙으로 등장 js 애니메이트
+top버튼 최상단에서 숨김
+*/
+
+
+
+
+
+/*공통영역*/
+#wrap{
+    width: 100%;
+}
+
+header, section, footer{
+    width: 100%;
+    position: relative;
+    float: left;
+}
+
+/* header */
+header{
+    height: 100px;
+    background-color: turquoise;
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+
+#logo{
+    width: 200px;
+    height: 80px;
+    background-color: orangered;
+    float: left;
+    text-align: center;
+    font: 900 50px/80px '';
+}
+
+
+#menu_wrap{
+    width: 900px;
+    height: 80px;
+    background-color: gold;
+    float: right;
+}
+
+#menu_wrap li{
+    width: 25%;
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#menu_wrap li:hover{
+    background-color: goldenrod;
+    color: honeydew;
+}
+
+
+/*section1*/
+#section_1 {
+    height: 700px;
+    background-color: orange;
+}
+
+#title{
+    width: auto;
+    height: auto;
+    background-color: lightseagreen;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-left: -153px;
+    margin-top: -66.5px;
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 20px;
+    opacity: 0;
+    animation: title_move 1s forwards;
+}
+
+@keyframes title_move{
+    
+    0%{
+        top: 70%;
+        opacity: 0;
+    }
+    100%{
+        top: 50%;
+        opacity: 1;
+    }
+    
+}
+
+/*section2*/
+#section_2{
+    height: 500px;
+    background-color: tomato;
+    margin: 100px 0;
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    background-color: turquoise;
+    position: absolute;
+    margin-top: -150px;
+    margin-left: -150px;
+    opacity: 0;
+}
+
+#box_2{
+    top: 50%;
+    left: 80%;
+}
+
+
+/*section3*/
+#section_3{
+    height: 600px;
+    background-color: rebeccapurple;
+    margin-bottom: 100px;
+}
+
+#box_3{
+    top: 90%;
+    left: 50%;
+}
+
+
+/*footer*/
+footer{
+    height: 150px;
+    background-color: teal;
+}
+
+
+/*top_btn*/
+#top_btn{
+    width: 80px;
+    height: 80px;
+    background-color: gold;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    font: 900 30px/80px '';
+    text-align: center;
+    display: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
